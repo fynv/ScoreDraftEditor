@@ -40,7 +40,7 @@ By default, it shows only the sheet music on the right side, which is updated af
 
 To generate the demo-page containing a music player and the Meteor visualizer, press F5 or click **Demo Page - Build**.
 
-![](C:\Users\Administrator\AppData\Roaming\marktext\images\2021-11-30-22-01-04-image.png)
+![meteor.png](meteor.png)
 
 You can also check **Demo Page - Auto Build** so that the demo-page is re-generated after each save.
 

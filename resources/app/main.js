@@ -12,7 +12,7 @@ const createWindow = () => {
     }
   })
   const exe_path = path.dirname(app.getPath("exe"));
-  const project_page = "https://fynv.github.io/ScoreDraft/"
+  const project_page = "https://fynv.github.io/ScoreDraftEditor/"
  
   
   var current_filename = "";

@@ -44,6 +44,14 @@ The editor itself is much smaller than the Electron binraries. So the smartest w
 
 You can also check the **release** part of this repo where I may put the full binary packages.
 
+### User Guide
+
+[https://fynv.github.io/ScoreDraftEditor/](https://fynv.github.io/ScoreDraftEditor/)
+
+### License 
+
+ScoreDraft Editor is Licensed under MIT.
+
 
 
 

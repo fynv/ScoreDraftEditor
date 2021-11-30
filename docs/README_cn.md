@@ -38,7 +38,7 @@
 
 如果想生成包含音频播放器和Meteor可视化的演示页，只需要按F5或者点击 Demo Page - Build。
 
-![](C:\Users\Administrator\AppData\Roaming\marktext\images\2021-11-30-22-01-04-image.png)
+![meteor.png](meteor.png)
 
 你也可以勾选 Demo Page - Auto Build，这样每次保存时会重新生成演示页。
 
