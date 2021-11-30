@@ -2,7 +2,7 @@
 
 # ScoreDraft Editor
 
-ScoreDraft Editor is an [Electron](https://www.electronjs.org/) based editor UI for [ScoreDraft](https://github.com/fynv/ScoreDraft), designated for its [YAML based input format]([Introduction to ScoreDraft | ScoreDraft](https://fynv.github.io/ScoreDraft/intro_eng.html#yaml-based-input)). ScoreDraft Editor can be used for music composing, previewing, engraving (with the help of [LilyPond](http://lilypond.org/)) and sharing (as a staic HTML demo-page).
+ScoreDraft Editor is an [Electron](https://www.electronjs.org/) based editor UI for [ScoreDraft](https://github.com/fynv/ScoreDraft), designated for its [YAML based input format](https://fynv.github.io/ScoreDraft/intro_eng.html#yaml-based-input). ScoreDraft Editor can be used for music composing, previewing, engraving (with the help of [LilyPond](http://lilypond.org/)) and sharing (as a staic HTML demo-page).
 
 Like LilyPond, ScoreDraft Editor supports your composing process through a simple text editor interface instead of a Piano Roll used by most DAW. ScoreDraft enhances LilyPond in the following apsects:
 
