@@ -16,7 +16,7 @@ except:
 def sys_detect():
     info = "<p> Python version: " + sys.version + "</p>\n"
     info += "<p> ScoreDraft version: " + version('scoredraft') + "</p>\n"
-    lilypond_out = check_output('lilypond -v').decode('utf-8')
+    lilypond_out = check_output(['lilypond', '-v']).decode('utf-8')
     lilypond_ver = 'Not Installed'
     m = re.match(r"GNU LilyPond (\d*.\d*.\d*)", lilypond_out)
     if not m is None:

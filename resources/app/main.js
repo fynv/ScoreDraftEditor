@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain, Menu, dialog, shell } = require('electron')
+const { app, BrowserWindow, ipcMain, Menu, dialog } = require('electron')
 const { exec } = require('child_process')
 const path = require('path')
 const fs = require('fs')
@@ -21,7 +21,7 @@ const createWindow = () => {
   const update_preview = () => {
     if (current_filename=="")
     {
-        win.webContents.send("preview", project_page);        
+        win.webContents.send("preview", project_page);
     }
     else
     {    
@@ -329,7 +329,7 @@ const createWindow = () => {
                                     }               
                                 }       
                             );
-                            var child = exec('python build_demo.py '+current_filename, { 'cwd': exe_path});
+                            var child = exec('scoredraft_build_demo '+current_filename, { 'cwd': exe_path});
                             await new Promise( (resolve) => 
                                 {
                                     child.on('close', resolve)
@@ -337,8 +337,7 @@ const createWindow = () => {
                             )
                             var parse_path = path.parse(current_filename);
                             var noext = path.format({ root: parse_path['root'], dir: parse_path['dir'], name: parse_path['name']});
-                            shell.openExternal(noext + '.html');
-                            update_preview();                            
+                            win.webContents.send("preview", noext + '.html');
                         }); 
                     }
                     else
@@ -360,7 +359,7 @@ const createWindow = () => {
                                         }               
                                     }       
                                 );
-                                var child = exec('python build_demo.py '+current_filename, { 'cwd': exe_path});
+                                var child = exec('scoredraft_build_demo '+current_filename, { 'cwd': exe_path});
                                 await new Promise( (resolve) => 
                                     {
                                         child.on('close', resolve)
@@ -368,7 +367,7 @@ const createWindow = () => {
                                 )
                                 var parse_path = path.parse(current_filename);
                                 var noext = path.format({ root: parse_path['root'], dir: parse_path['dir'], name: parse_path['name']});
-                                shell.openExternal(noext + '.html');
+                                win.webContents.send("preview", noext + '.html');
                                 update_title();                                
                             });                             
                         }                                      
@@ -399,15 +398,15 @@ const createWindow = () => {
                         {
                             child.on('close', resolve)
                         }
-                    )                    
-                    shell.openExternal(exe_path + "/sys_detect.html");
+                    )
+                    win.webContents.send("preview", exe_path + "/sys_detect.html");                    
                 }
             },
             {
                 label: '&Learn More',
                 click: () => 
-                {                 
-                  shell.openExternal(project_page);
+                {
+                    win.webContents.send("preview", project_page);
                 }
             },
             
@@ -426,7 +425,8 @@ const createWindow = () => {
         {
             await _doc_open(filename);
             current_filename = filename;
-            update_title();    
+            update_title();
+            update_preview();
         });        
     });      
 
