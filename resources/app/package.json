@@ -1,0 +1,15 @@
+{
+  "name": "ScoreDraftEditor",
+  "version": "1.0.0",
+  "description": "YAML Editor for ScoreDraft",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "fei",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^16.0.2"
+  }
+}

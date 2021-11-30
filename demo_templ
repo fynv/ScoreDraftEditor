@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="meteor_static.js"></script>
+    <script type="text/javascript">
+    window.onload = function() 
+    {        
+        var res= {
+            canvasID : "canvas1",
+            audioID : "audio1",
+            b64Data : "####b64####"
+        };
+        meteor = new Meteor(res);
+    };
+    </script>
+    
+    <style type="text/css">       
+        canvas1 {
+            display: block;
+            width: 100%;
+            height: width*0.5625;
+        }
+        
+        .v_block
+        {
+            display: block;       
+        }
+        
+        #pdf
+        {
+            display: block;      
+            width: 100%;
+            height: width * 1.4;          
+        }
+        
+    </style>
+
+    <title>Demo</title>
+</head>
+
+<body>
+    <div class ="v_block">
+        <canvas id="canvas1" width="800" height="450"></canvas>
+    </div>
+    <div class ="v_block">
+        <audio id='audio1' controls="controls">
+            <source type="audio/wav" src="####wav####"/>
+        </audio>
+    </div>
+    
+    <embed id ="pdf" src="####pdf####" width = "800" height="1120">
+    
+</body>
