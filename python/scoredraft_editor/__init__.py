@@ -6,22 +6,35 @@ from importlib.metadata import version
 from subprocess import check_output
 import re
 
+if os.name == 'nt':
+    os.environ["PATH"] += os.pathsep + "c:/Program Files (x86)/LilyPond/usr/bin"
+    
 try:
     import ScoreDraft as sd
-    from ScoreDraft.SoundFont2 import GetSF2Bank
 except:
     pass
 
 
 def sys_detect():
-    info = "<p> Python version: " + sys.version + "</p>\n"
-    info += "<p> ScoreDraft version: " + version('scoredraft') + "</p>\n"
-    lilypond_out = check_output(['lilypond', '-v']).decode('utf-8')
-    lilypond_ver = 'Not Installed'
-    m = re.match(r"GNU LilyPond (\d*.\d*.\d*)", lilypond_out)
-    if not m is None:
-        groups = m.groups()
-        lilypond_ver = groups[0]
+    info = "<p> Python version: " + sys.version + "</p>\n"    
+    
+    scoredraft_ver = 'Not Installed'
+    try:
+         scoredraft_ver = version('scoredraft')
+    except:
+        pass
+    info += "<p> ScoreDraft version: " + scoredraft_ver + "</p>\n"
+    
+    lilypond_ver = 'Not Installed'    
+    try:
+        lilypond_out = check_output(['lilypond', '-v']).decode('utf-8')
+        m = re.match(r"GNU LilyPond (\d*.\d*.\d*)", lilypond_out)
+        if not m is None:
+            groups = m.groups()
+            lilypond_ver = groups[0]
+    except:
+        pass   
+    
     info += "<p> LilyPond version: " + lilypond_ver + "</p>\n"
     
     try:
@@ -44,7 +57,7 @@ def sys_detect():
                 info += "<ul>\n"
                 
                 path = 'SF2/' + groups[0] + '.sf2'
-                sf2 = GetSF2Bank(path)
+                sf2 = sd.GetSF2Bank(path)
                 num_presets = sf2.num_presets()
                 for i in range(num_presets):
                     preset = sf2.get_preset_info(i)

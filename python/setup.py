@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
         name = 'scoredraft_editor',
-        version = '0.0.2',
+        version = '0.0.3',
         description = 'Commandline Utilities for ScoreDraftEditor',     
         url='https://github.com/fynv/ScoreDraftEditor',
         license='MIT',
@@ -10,7 +10,7 @@ setup(
         author_email='hyangfeih@gmail.com',
         keywords='synthesizer audio music utau psola',
         packages=['scoredraft_editor'], 
-        install_requires = ['scoredraft'],
+        install_requires = ['scoredraft>=1.0.6'],
         entry_points={
         'console_scripts': [
             'scoredraft_sys_detect=scoredraft_editor:sys_detect',
