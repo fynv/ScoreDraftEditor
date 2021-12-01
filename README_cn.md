@@ -44,7 +44,7 @@ or [Miniconda — Conda documentation](https://docs.conda.io/en/latest/miniconda
 
 ### 用户手册
 
-[https://fynv.github.io/ScoreDraftEditor/](https://fynv.github.io/ScoreDraftEditor/)
+[https://fynv.github.io/ScoreDraftEditor/README_cn.html](https://fynv.github.io/ScoreDraftEditor/README_cn.html)
 
 ### 版权协议
 
