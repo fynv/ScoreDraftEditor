@@ -2,13 +2,13 @@
 
 # ScoreDraft Editor
 
-ScoreDraft Editor is an [Electron](https://www.electronjs.org/) based editor UI for [ScoreDraft](https://github.com/fynv/ScoreDraft), designated for its [YAML based input format](https://fynv.github.io/ScoreDraft/intro_eng.html#yaml-based-input). ScoreDraft Editor can be used for music composing, previewing, engraving (with the help of [LilyPond](http://lilypond.org/)) and sharing (as a staic HTML demo-page).
+ScoreDraft Editor is an [Electron](https://www.electronjs.org/) based editor UI for [ScoreDraft](https://github.com/fynv/ScoreDraft), designated for its [YAML based input format](https://fynv.github.io/ScoreDraft/intro_eng.html#yaml-based-input). ScoreDraft Editor can be used for music composing, previewing, engraving (with the help of [LilyPond](http://lilypond.org/)) and sharing (as a static HTML demo-page).
 
-Like LilyPond, ScoreDraft Editor supports your composing process through a simple text editor interface instead of a Piano Roll used by most DAW. ScoreDraft enhances LilyPond in the following apsects:
+Like LilyPond, ScoreDraft Editor supports your composing process through a simple text editor interface instead of a Piano Roll used by most DAW. ScoreDraft enhances LilyPond in the following aspects:
 
 * Providing a built-in synthesizer, which supports SoundFont2. The synthesizer can be activated anytime during the composing process. Depending on the sound-font of your choice, the sound quality can be much better than the system sequencer.
 
-* Provding a voice synthesizer, compatible to [UTAU]([utau.us](http://utau.us)). Composer can preview not only the melody, but also the voice part.
+* Providing a voice synthesizer, compatible to [UTAU]([utau.us](http://utau.us)). Composer can preview not only the melody, but also the voice part.
 
 * Providing a sequence visualizer called Meteor. The visualizer component can be embedded into the HTML demo-page.
 
@@ -40,7 +40,7 @@ Here you need the PyPi package **scoredraft_editor** instead of **scoredraft**, 
 
 ### The Editor
 
-The editor itself is much smaller than the Electron binraries. So the smartest way to get the editor installed is to follow the [manual distribution](https://www.electronjs.org/docs/latest/tutorial/application-distribution#manual-distribution) procedural of electron. Download the prebuilt binaries, and copy everything from this repo to the electron folder. (May need to remove default_app.asar).
+The editor itself is much smaller than the Electron binaries. So the smartest way to get the editor installed is to follow the [manual distribution](https://www.electronjs.org/docs/latest/tutorial/application-distribution#manual-distribution) procedural of electron. Download the prebuilt binaries, and copy everything from this repo to the electron folder. (May need to remove default_app.asar).
 
 You can also check the **release** part of this repo where I may put the full binary packages.
 
