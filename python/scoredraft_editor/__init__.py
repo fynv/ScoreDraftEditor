@@ -79,10 +79,10 @@ def sys_detect():
     except:
         pass
     
-    with open('sys_detect_templ', 'r') as f_tmpl:
+    with open('sys_detect_templ', 'r', encoding = 'utf-8') as f_tmpl:
         templ = f_tmpl.read()
         templ = templ.replace('####result####', info)        
-        with open("sys_detect.html", 'w') as f_out:
+        with open("sys_detect.html", 'w', encoding = 'utf-8') as f_out:
             f_out.write(templ) 
 
 def build_pdf():
@@ -90,10 +90,10 @@ def build_pdf():
     fn = os.path.splitext(fn_in)[0]
     fn_ly = fn + '.ly'
 
-    with open(fn_in, 'r') as f_in:
+    with open(fn_in, 'r', encoding = 'utf-8') as f_in:
         score = sd.YAMLScore(f_in)
 
-        with open(fn_ly, 'w') as f_out:
+        with open(fn_ly, 'w', encoding = 'utf-8') as f_out:
             f_out.write(score.to_ly())
 
         os.system('lilypond -o ' + fn  +" " + fn_ly)
@@ -107,10 +107,10 @@ def build_demo():
     fn_wav = fn + '.wav'
     fn_html = fn + '.html'
 
-    with open(fn_in, 'r') as f_in:
+    with open(fn_in, 'r', encoding = 'utf-8') as f_in:
         score = sd.YAMLScore(f_in)
 
-        with open(fn_ly, 'w') as f_out:
+        with open(fn_ly, 'w', encoding = 'utf-8') as f_out:
             f_out.write(score.to_ly())
 
         os.system('lilypond -o ' + fn  +" " + fn_ly)
@@ -126,7 +126,7 @@ def build_demo():
             templ = templ.replace('####b64####', b64)
             templ = templ.replace('####wav####', fn_wav + "?t="+str(time.time()))
             templ = templ.replace('####pdf####', fn_pdf + "?t="+str(time.time()))
-            with open(fn_html, 'w') as f_out:
+            with open(fn_html, 'w', encoding = 'utf-8') as f_out:
                 f_out.write(templ)
                 
         dir_name = os.path.dirname(fn_in)

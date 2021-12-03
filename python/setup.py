@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
         name = 'scoredraft_editor',
-        version = '0.0.3',
+        version = '0.0.4',
         description = 'Commandline Utilities for ScoreDraftEditor',     
         url='https://github.com/fynv/ScoreDraftEditor',
         license='MIT',
