@@ -42,11 +42,11 @@ or [Miniconda — Conda documentation](https://docs.conda.io/en/latest/miniconda
 
 你也可以看一下release页面，我可能会放上完整的发布包。
 
-### 用户手册
+## 用户手册
 
 [https://fynv.github.io/ScoreDraftEditor/README_cn.html](https://fynv.github.io/ScoreDraftEditor/README_cn.html)
 
-### 版权协议
+## 版权协议
 
 MIT 协议
 
