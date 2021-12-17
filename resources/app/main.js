@@ -428,7 +428,21 @@ const createWindow = () => {
             update_title();
             update_preview();
         });        
-    });      
+    });     
+    
+    var closable = false; 
+    
+    win.on('close', function(e){       
+        doc_close( async () =>
+        {
+            closable = true;
+            win.close();
+        });
+        
+        if(!closable){
+            e.preventDefault();            
+        }
+    });
 
   win.loadFile('index.html')
   // win.webContents.openDevTools()
